@@ -1,14 +1,17 @@
 from flask import Flask, render_template, request
 from main import convertImageToAscii
+from flask_cors import CORS
 import os
 
 app = Flask(__name__)
+cors = CORS(app, resources={r"/ascii/": {"origins": "https://choubeyaakash77.github.io/image-texter/"}})
 
 @app.route('/')
 def out():
     return "Server running"
 
 @app.route('/ascii/', methods=['GET', 'POST'])
+@cross_origin()
 def ascii():
     img = request.files['image']
     ext = img.filename.split('.')[-1].lower()
