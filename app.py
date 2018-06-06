@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 from main import convertImageToAscii
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 import os
 
 app = Flask(__name__)
