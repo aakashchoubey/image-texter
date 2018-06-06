@@ -1,0 +1,7 @@
+Updating on Heroku
+
+heroku auth:login
+cd server
+git add .
+git commit -am "Deploying"
+git push heroku master
