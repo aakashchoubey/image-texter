@@ -31,7 +31,7 @@ class App extends Component {
                             />
                         </div>
                         {(this.state.fileUploaded === true ?
-                            <div className="container">
+                            <div className="container-fluid">
                                 <Output output={this.state.outputGenerated} />
                                 <ShareBtns />
                             </div>
